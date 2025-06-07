@@ -677,7 +677,7 @@ dependencies = [
 
 [[package]]
 name = "plume_bn254"
-version = "0.0.1"
+version = "0.0.0"
 dependencies = [
  "acir_field",
  "acvm_blackbox_solver",
@@ -685,8 +685,8 @@ dependencies = [
  "ark-ec",
  "ark-ff",
  "ark-grumpkin",
- "ark-serialize",
  "bn254_blackbox_solver",
+ "zeroize",
 ]
 
 [[package]]

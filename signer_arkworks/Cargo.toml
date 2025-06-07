@@ -1,12 +1,9 @@
 [package]
 name = "plume_bn254"
-version = "0.0.1"
+version = "0.0.0"
 edition = "2024"
 
 [dependencies]
-# the published `v0.46.0` is useless as `Poseidon2` is `pub(crate)`
-# bn254_blackbox_solver = "*"
-# acvm_blackbox_solver = "*"
 bn254_blackbox_solver = {git = "https://github.com/noir-lang/noir/", tag = "v1.0.0-beta.3"}
 acvm_blackbox_solver = {git = "https://github.com/noir-lang/noir/", tag = "v1.0.0-beta.3"}
 acir_field = {git = "https://github.com/noir-lang/noir/", tag = "v1.0.0-beta.3"}
@@ -14,9 +11,8 @@ acir_field = {git = "https://github.com/noir-lang/noir/", tag = "v1.0.0-beta.3"}
 ark-bn254 = "*"
 ark-ff = "*"
 ark-ec = "*"
-ark-serialize = "*"
-#hex = "*"
-## thiserror = "*"
 
 ark-grumpkin = "*"
 # num-bigint = "*"
+
+zeroize = "^1.8.1"

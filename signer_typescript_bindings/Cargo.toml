@@ -1,0 +1,32 @@
+[package]
+name = "plume-sig-bn254"
+version = "0.0.0"
+authors = ["skaunov"]
+edition = "2018"
+keywords = ["nullifier", "zero-knowledge", "ECDSA", "PLUME", "BN254"]
+repository = "https://github.com/plume-sig/zk-nullifier-sig/"
+description = "TODO wrapper around `plume_rustcrypto` crate to produce PLUME signatures in JS contexts using Wasm"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "~0.2.84"
+js-sys = "0.3"
+serde = "*"
+serde-wasm-bindgen = "*"
+
+plume_bn254 = {path = "../signer_arkworks"}
+ark-serialize = "*"
+
+getrandom = { version = "0.2", features = ["js"] }
+ark-std = "*"
+
+[dev-dependencies]
+wasm-bindgen-test = "~0.3.34"
+# rand = "*"
+
+[profile.release] # This comes from template; docs doesn't tell much about it.
+# Tell `rustc` to optimize for small code size.
+# opt-level = "s"
